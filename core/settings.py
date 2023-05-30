@@ -11,20 +11,24 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-import os
+# from dotenv import load_dotenv
+# import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv('.env')
+# load_dotenv('.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = os.environ.get("SECRET_KEY") 
 
+SECRET_KEY = "django-insecure-2q2e&=m&#c0p4*&%5&+bt^rsk!%laamxrqc-a3)%o45-i9v03%"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
+# DEBUG = os.environ.get("DEBUG")
+
+DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -110,14 +114,21 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE")
+# LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE")
 
-TIME_ZONE = os.environ.get("TIME_ZONE")
+# TIME_ZONE = os.environ.get("TIME_ZONE")
 
-USE_I18N = os.environ.get("USE_I18N")
+# USE_I18N = os.environ.get("USE_I18N")
 
-USE_TZ = os.environ.get("USE_TZ")
+# USE_TZ = os.environ.get("USE_TZ")
 
+LANGUAGE_CODE = "ru"
+
+TIME_ZONE = "Asia/Bishkek"
+
+USE_I18N = "True"
+
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
