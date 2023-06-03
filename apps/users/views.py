@@ -8,3 +8,4 @@ from .serialisers import UsersSerializer
 class UsersAPI(generics.ListAPIView):
     queryset = Users.objects.all()
     serializer_class = UsersSerializer
+    

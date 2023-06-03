@@ -1,28 +1,17 @@
 from django.db import models
-
+from django_resized.forms import ResizedImageField
 # Create your models here.
 class Users(models.Model):
-    user_id = models.CharField(
-        max_length=255,
-        verbose_name="ID Пользователя"
-    )
     user_name = models.CharField(
         max_length=255,
         verbose_name="Имя Пользователя"
     )
-    user_target = models.TextField(
-        verbose_name="Цель пользователя"
-    )
-    user_image = models.ImageField(
-        upload_to="user_image/",
-        verbose_name="Фотография пользователя"
-    )
-    user_gender = models.CharField(
-        max_length=255,
-        verbose_name="Пол пользователя"
-    )
-    user_age = models.IntegerField(
-        verbose_name="Возраст пользователя"
+    user_image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='logo/',
+        verbose_name="Фотография пользователя",
+        blank = True, null = True
     )
     
     def __str__(self):
