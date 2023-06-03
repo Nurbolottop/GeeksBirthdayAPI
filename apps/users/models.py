@@ -2,6 +2,10 @@ from django.db import models
 from django_resized.forms import ResizedImageField
 # Create your models here.
 class Users(models.Model):
+    user_id = models.CharField(
+        max_length=255,
+        verbose_name="Id Пользователя"
+    )
     user_name = models.CharField(
         max_length=255,
         verbose_name="Имя Пользователя"
