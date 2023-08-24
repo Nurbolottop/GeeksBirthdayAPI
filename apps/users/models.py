@@ -19,7 +19,7 @@ class Users(models.Model):
     )
     
     def __str__(self):
-        return f"Имя: {self.user_name} - Возраст: {self.user_age}"
+        return f"Имя: {self.user_name} - Айди: {self.user_id}"
     
     class Meta:
         verbose_name = "Пользователь"
