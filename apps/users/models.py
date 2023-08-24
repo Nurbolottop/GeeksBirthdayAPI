@@ -1,5 +1,6 @@
 from django.db import models
-from django_resized.forms import ResizedImageField
+# from django_resized.forms import ResizedImageField
+
 # Create your models here.
 class Users(models.Model):
     user_id = models.CharField(
@@ -10,12 +11,9 @@ class Users(models.Model):
         max_length=255,
         verbose_name="Имя Пользователя"
     )
-    user_image = ResizedImageField(
-        force_format="WEBP", 
-        quality=100, 
-        upload_to='logo/',
+    user_image = models.ImageField(
+        upload_to='image_users/',
         verbose_name="Фотография пользователя",
-        blank = True, null = True
     )
     
     def __str__(self):
