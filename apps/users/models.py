@@ -11,6 +11,10 @@ class Users(models.Model):
         max_length=255,
         verbose_name="Имя Пользователя"
     )
+    user_gender = models.CharField(
+        max_length=255,
+        verbose_name="Пол Пользователя"
+    )
     user_image = models.ImageField(
         upload_to='image_users/',
         verbose_name="Фотография пользователя",
