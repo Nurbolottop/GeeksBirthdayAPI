@@ -28,7 +28,7 @@ class Users(models.Model):
         verbose_name="Фотография пользователя",
     )
     user_level = models.ForeignKey(
-        Gender,
+        Level,
         on_delete = models.CASCADE,
         related_name = "level",
         verbose_name = "Выберите уровень",
