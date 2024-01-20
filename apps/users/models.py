@@ -31,7 +31,8 @@ class Users(models.Model):
         Gender,
         on_delete = models.CASCADE,
         related_name = "level",
-        verbose_name = "Выберите уровень"
+        verbose_name = "Выберите уровень",
+        blank = True,null = True
     )
     
     def __str__(self):
