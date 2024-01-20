@@ -2,13 +2,13 @@ from django.db import models
 # from django_resized.forms import ResizedImageField
 
 # Create your models here.
-class Gender(models.Model):
-    gender = models.CharField(
+class Level(models.Model):
+    level = models.CharField(
         max_length=255,
         verbose_name="Пол Пользователя"
     )
     def __str__(self):
-        return f" {self.gender}"
+        return f" {self.level}"
     
     class Meta:
         verbose_name = "1) Добавить уровни"
