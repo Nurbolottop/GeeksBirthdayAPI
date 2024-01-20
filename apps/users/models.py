@@ -30,7 +30,7 @@ class Users(models.Model):
     user_level = models.ForeignKey(
         Level,
         on_delete = models.CASCADE,
-        related_name = "level",
+        related_name = "level_user",
         verbose_name = "Выберите уровень",
         blank = True,null = True
     )
